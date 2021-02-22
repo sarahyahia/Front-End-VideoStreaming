@@ -1,0 +1,385 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 100%;
+  background-image: url(../imgs/movie-theater-background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  background-color: rgb(5, 5, 5);
+  height: 100%;
+  margin-bottom: 10%;
+  line-height: 1.8;
+  color: #d3d2d2;
+  font-size: 15px;
+}
+/* start navbar */
+.navbar {
+  font-size: 25px;
+}
+.navbar ul {
+  list-style: none;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.navbar ul li,
+.navbar .logo {
+  margin-left: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* end navbar */
+.img-thumbnail {
+  margin-bottom: 32px;
+  background-color: rgba(5, 5, 5, 0.8);
+}
+
+.VideoNav {
+  /* background-color: #fafafa; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.08);
+  height: 250%;
+  display: block;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position: 0px 0px;
+  background-repeat: repeat;
+  background-size: auto;
+  border-right-color: rgba(0, 0, 0, 0.05);
+  border-right-style: solid;
+  border-right-width: 1px;
+  
+}
+.contact-side-image {
+  position: relative;
+  text-align: center;
+  margin-left:4%;
+}
+.imagePoster {
+  height: 450px;
+  width: 321px;
+
+  border: 0;
+}
+
+.sideNav {
+  margin-left:2%;
+  padding: 0px 35px;
+  margin-bottom: 42px;
+}
+
+.showtitleNav {
+  text-decoration: none;
+  padding-top: 35px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #d3d2d2;
+  margin: 0px 0px 15px 0px;
+  word-wrap: break-word;
+}
+
+.header4Nv {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.conactNav {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.videoArea {
+  height: 80vh;
+  background-color: rgb(51, 51, 51);
+  border-bottom-color: rgb(85, 85, 85);
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media (max-width: 920px) {
+  .videoNav,
+  #artT {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.subtitle {
+  width: 80%;
+  top: 80%;
+  vertical-align: middle;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 20px;
+  color: rgb(250, 243, 243);
+  display: inline-block;
+  font-size: 24px;
+  height: 15%;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  text-shadow: black 1px 1px 2px, rgb(29, 29, 48) 0px 0px 1em,
+    rgb(28, 28, 54) 0px 0px 0.2em;
+}
+
+.subtitleText {
+  transform: translate(-50%, -50%);
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+.overlay {
+  z-index: 50;
+  position: absolute;
+  display: block;
+  left: 50%;
+  text-align: center;
+  color: rgb(15, 15, 15);
+  border-radius: 100px;
+  top: 50%;
+  margin-top: -75px;
+  margin-left: -55px;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+  font-size: 46px;
+  border: 3px solid rgb(15, 15, 15);
+}
+
+.playerBtn {
+  width: 40px;
+  height: 40px;
+}
+.playerBtn1 {
+  width: 40px;
+  height: 40px;
+  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg)
+    brightness(95%) contrast(80%);
+}
+.playerBtn2 {
+  width: 40px;
+  height: 40px;
+  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg)
+    brightness(95%) contrast(80%);
+}
+#VideoSpeed {
+  width: 40;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: black;
+}
+
+.controls {
+  background-color: rgba(219, 208, 208, 0.308);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.progressBackground {
+  width: 100%;
+  background-color: white;
+  left: 0px;
+  top: 0px;
+}
+
+.progress {
+  height: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progressValue {
+  width: 100%;
+  background-color: rgb(34, 31, 31);
+  color: #333333;
+}
+#vol-control {
+  width: 95px;
+}
+
+.dashboardContanier {
+  padding: 40px 50px 0px 50px;
+  text-align: left;
+  font-size: 18px;
+  background-color: rgb(5, 5, 5, 0.5);
+}
+.moviedetails {
+  margin-bottom: 15px;
+}
+.movieactors {
+  margin-bottom: 40px;
+}
+h3{
+  color: burlywood;
+  text-decoration: none;
+}
+.header3Aart {
+  text-decoration: none;
+  font-size: 28px;
+  color: burlywood;
+  font-weight: 600;
+}
+.listactors {
+  list-style: none;
+  margin: 0px 0px -10px 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+.listactors li {
+  margin: 0px 0px 10px 0px;
+  display: block;
+  float: left;
+  width: calc(25% - 22px);
+  padding-right: 22px;
+}
+.morelikethis {
+  margin-bottom: 20px;
+}
+.header2aART {
+  font-weight: 600;
+  color: burlywood;
+}
+
+.episodetitle {
+  font-size: x-large;
+  color: burlywood;
+}
+.episodesection {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.seasonsnumber {
+  list-style: none;
+  margin: 0px 0px 35px 0px;
+  padding: 3px 0px 0px 0px;
+  width: 100%;
+  position: relative;
+}
+.season-title-style {
+  margin: 0px 60px 0px 0px;
+  display: block;
+  border-color: #3b1218;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  
+  color: burlywood;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  float: left;
+  z-index: 5;
+  position: relative;
+  padding: 14px 0px;
+}
+
+.episodestyle {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.episodelooks {
+  margin: 0px 0px 30px 0px;
+  padding: 0px 0px 30px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.episode-list-pics {
+  height: 254.8px;
+  width: 379.5px;
+  object-fit: cover;
+}
+.blackepisodetitle {
+  color: #555555;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.episodedetails {
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-right: 8px;
+  padding: 0;
+  color: rgb(145, 96, 96);
+}
+.season-episode-details {
+  border-right-width: 1px;
+  margin: 0px 8px 5px 0px;
+  padding: 0px 8px 0px 0px;
+  display: inline;
+}
+
+.moreLikeTHAT {
+  height: 300.117x;
+  width: 263.917px;
+}
+
+
+.headernumber1 {
+  font-size: 35px;
+  padding-top: 30px;
+  margin-top: 100px !important;
+  line-height: 1;
+  box-sizing: border-box;
+  font-weight: 700;
+  color: #333333;
+}
+.titleEdit {
+  color: #9b9b9b;
+  font-size: 19px;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 10px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+.floatleft {
+  float: left;
+}
+.lettersfeat {
+  color: #919191;
+  font-size: 15px;
+  line-height: 27px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+.form0 {
+  padding: 30px;
+}

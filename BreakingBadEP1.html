@@ -1,0 +1,163 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">   
+    <link rel="stylesheet" href="css/BreakingBadEp1.css" />  
+    <script src="js/jquery.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> 
+    <title>Breaking Bad S01E01</title>
+<body class="videodashbody">
+     <!-- start navbar -->
+     <div class="navbar" style="background-color: black;padding-top: 2%;">
+        <nav class="navbar navbar-expand-md navbar-dark ">
+            <!-- <a class="navbar-brand logo text-uppercase button hvr-grow">skrn<span class="dott">.</span></a> -->
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="/Dashboard.html" class="nav-link button hvr-grow">TV Shows & Movies<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/EditProfile.html" class="nav-link button hvr-grow">Edit Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="/add.html" style="display: none;" class="nav-link button hvr-grow admin">Add Video <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="#" id="logout" class="nav-link button hvr-grow">Log out <span class="sr-only">(current)</span></a>
+                </li>
+                
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <button type="submit" class="btn btn-light btn-lg my-2 my-sm-0 button hvr-grow" style="color:#060606 ;">Sign in</button>
+            </form> -->
+            </div>
+        </nav>
+    </div>
+    <!-- end navbar -->
+<nav class="col-md-3 col-xs-2 col-sm-2 videoNav nav flex-column">
+<div class="contact-side-image">
+    <img src="https://i.imgur.com/by0qJA1.jpg" class="imagePoster img-responsive" style="display: inline-block;">
+</div>
+<div class="sideNav">
+    <h2 class="showtitleNav">Breaking Bad</h2>
+</div>
+<div class="sideNav">
+    <h4 class="header4Nv">Release Date</h4>
+    <div class="conactNav">15 Feb. 2010</div>
+</div>
+<div class="sideNav">
+    <h4 class="header4Nv">Duration</h4>
+    <div class="conactNav">49m</div>
+</div>
+<div class="sideNav">
+    <h4 class="header4Nv">Director</h4>
+    <div class="conactNav">Nolan</div>
+</div>
+    </nav><article class="col-md-9 col-xs-10 col-sm-10">
+
+        <section>
+
+            <div class="videoArea" onclick="toggle()" onmouseover="showControls()" onmouseout="hideControls()" >
+        
+        
+                <video class="video" id="myvideo" buffer preload="none" poster="https://i.imgur.com/foUjf53.png">
+                    <source src="https://archive.org/download/got-2/BB1.mp4" type="video/mp4">
+                </video>
+                <div class="subtitle" >
+                    <div id="subtitle" class="subtitleText" ></div>
+                </div>
+                <div id="overlay" class="overlay glyphicon glyphicon-play"></div>
+            
+                <div id="controls" class="controls" onclick="event.stopPropagation()">  
+                    <div id="progressBackground" class="progress progressBackground">
+                    <div id="progressValue" class="progress progressValue"></div></div>
+                    <hr/>
+                    <img onclick="play();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/play-icon.png" />
+                    <img onclick="stop();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/stop-icon.png" />
+                    <img onclick="pause();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/pause-icon.png" />
+                    <img onclick="moveBackward();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/rewind-icon.png" />
+                    <img onclick="moveForward();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/forward-icon.png" />                  
+                     <img onclick="loop();" id="loops" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/replay-icon.png"/>    
+                     <a onclick="window.location.href='https://www.w3schools.com/tags/movie.mp4'"><img class="playerBtn" src="https://image.flaticon.com/icons/png/128/2820/2820253.png" /></a> 
+                <select id="videoSpeed" onchange="videoSpeedChanged()">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="2">2x</option>
+                    <option value="4">4x</option>
+                </select>
+                <img onclick="mute();" id="mutes" class="playerBtn2" src="https://image.flaticon.com/icons/png/128/149/149136.png"/>        
+                <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+                <img onclick="fullScreen();" class="playerBtn" src="https://image.flaticon.com/icons/png/128/60/60694.png"/>
+            </div>
+              </div>
+              
+
+
+
+
+</section>
+<div class="dashboardContanier">
+    <h2 class="episodetitle">Episode 1: The Holy Trinity</h2>
+    <hr/>
+<div class="moviedetails">
+    <p>Walter White, a chemistry teacher, discovers that he has cancer and decides to get into the meth-making business to repay his medical debts.<br> His priorities begin to change when he partners with Jesse.</p>
+</div>
+<hr/>
+
+<div class="movieactors">
+    <h3 class="header3Aart">Lead Cast</h3>
+    <ul class="listactors">
+        <li>Aaron Paul</li>
+        <li>Bard Pitt</li>
+        <li>Sean Bean</li>
+        <li>Emilia Clarke</li>
+    </ul>
+</div>
+<hr/>
+
+<div class="episodesection">
+    <ul class="seasonsnumber">
+        <li class="season-title-style">Season 1</li>
+    </ul>
+    <br/>
+<ul class="episodestyle">
+    <li class="episodelooks">
+        <div class="media">
+            <div class="media-left media-middle">
+              <a href="#">
+                <img class="media-object episode-list-pics" src="https://i.imgur.com/foUjf53.png" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+                <a class="blackepisodetitle" href="#"> <h3 class="media-heading">1. Pilot</h4></a>
+                <div class="episodedetails">
+                    <span class="season-episode-details">Season 1 </span>&nbsp; November 12, 2010
+                </div><br/>
+                Walter White, a 50-year-old high school chemistry teacher facing a midlife crisis, finds out he has Stage 3, inoperable lung cancer. After riding along with his brother-in-law, DEA agent Hank Schraeder, on a raid of a methamphetamine lab,            </div>
+          </div>
+    </li>
+    <li class="episodelooks">
+        <div class="media">
+            <div class="media-left media-middle">
+              <a href="BreakingBadEP2.html">
+                <img class="media-object episode-list-pics" src="https://i.imgur.com/CcFZb5o.jpg" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+                <a class="blackepisodetitle" href="BreakingBadEP2.html"> <h3 class="media-heading">2. Operation Desert Stumble</h4></a>
+                <div class="episodedetails">
+                    <span class="season-episode-details">Season 1 </span>&nbsp; November 19, 2018
+                </div><br/>
+                Walter White, a 50-year-old high school chemistry teacher facing a midlife crisis, finds out he has Stage 3, inoperable lung cancer. After riding along with his brother-in-law, DEA agent Hank Schraeder, on a raid of a methamphetamine lab,              
+            </div>
+          </div>
+    </li>
+</ul>
+</div>
+</div>
+    </article>
+    <script src="js/main.js" ></script>
+</body>
+</html>

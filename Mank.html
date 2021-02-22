@@ -1,0 +1,152 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">   
+    <link rel="stylesheet" href="css/BreakingBadEp1.css" />  
+    <script src="js/jquery.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> 
+    <title>Mank</title>
+<body class="videodashbody">
+     <!-- start navbar -->
+     <div class="navbar" style="background-color: black;padding-top: 2%;">
+        <nav class="navbar navbar-expand-md navbar-dark ">
+            <!-- <a class="navbar-brand logo text-uppercase button hvr-grow">skrn<span class="dott">.</span></a> -->
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="/Dashboard.html" class="nav-link button hvr-grow">TV Shows & Movies<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/EditProfile.html" class="nav-link button hvr-grow">Edit Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="/add.html" style="display: none;" class="nav-link button hvr-grow admin">Add Video <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="#" id="logout" class="nav-link button hvr-grow">Log out <span class="sr-only">(current)</span></a>
+                </li>
+                
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <button type="submit" class="btn btn-light btn-lg my-2 my-sm-0 button hvr-grow" style="color:#060606 ;">Sign in</button>
+            </form> -->
+            </div>
+        </nav>
+    </div>
+    <!-- end navbar -->
+<nav class="col-md-3 col-xs-2 col-sm-2 videoNav nav flex-column">
+<div class="contact-side-image">
+    <img src="imgs\fmi8F04.jpg" class="imagePoster img-responsive" style="display: inline-block;">
+</div>
+<div class="sideNav">
+    <h2 class="showtitleNav">Mank</h2>
+</div>
+<div class="sideNav">
+    <h4 class="header4Nv">Release Date</h4>
+    <div class="conactNav">15 Feb. 2020</div>
+</div>
+<div class="sideNav">
+    <h4 class="header4Nv">Duration</h4>
+    <div class="conactNav">2h 32m</div>
+</div>
+<div class="sideNav">
+    <h4 class="header4Nv">Director</h4>
+    <div class="conactNav">Nolan</div>
+</div>
+    </nav><article class="col-md-9 col-xs-10 col-sm-10">
+
+        <section>
+
+            <div  class="videoArea" onclick="toggle()" onmouseover="showControls()" onmouseout="hideControls()" >
+        
+        
+                <video class="video" id="myvideo" buffer preload="none" poster="https://i.imgur.com/YNsQSin.jpg">
+                    <source src="https://archive.org/download/got-2/Mank.mp4" type="video/mp4">
+                </video>
+                <div class="subtitle" >
+                    <div id="subtitle" class="subtitleText" ></div>
+                </div>
+                <div id="overlay" class="overlay glyphicon glyphicon-play"></div>
+            
+                <div id="controls" class="controls" onclick="event.stopPropagation()">  
+                    <div id="progressBackground" class="progress progressBackground">
+                    <div id="progressValue" class="progress progressValue"></div></div>
+                    <hr/>
+                    <img onclick="play();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/play-icon.png" />
+                    <img onclick="stop();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/stop-icon.png" />
+                    <img onclick="pause();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/pause-icon.png" />
+                    <img onclick="moveBackward();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/rewind-icon.png" />
+                    <img onclick="moveForward();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/forward-icon.png" />                  
+                     <img onclick="loop();" id="loops" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/replay-icon.png"/>    
+                     <a onclick="window.location.href='https://www.w3schools.com/tags/movie.mp4'"><img class="playerBtn" src="https://image.flaticon.com/icons/png/128/2820/2820253.png" /></a> 
+                <select id="videoSpeed" onchange="videoSpeedChanged()">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="2">2x</option>
+                    <option value="4">4x</option>
+                </select>
+                <img onclick="mute();" id="mutes" class="playerBtn2" src="https://image.flaticon.com/icons/png/128/149/149136.png"/>        
+                <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+                <img onclick="fullScreen();" class="playerBtn" src="https://image.flaticon.com/icons/png/128/60/60694.png"/>
+            </div>
+              </div>
+              
+
+
+
+
+</section>
+<div class="dashboardContanier">
+<div class="moviedetails">
+    <p>Mae Holland (Emma Watson) seizes the opportunity of a lifetime when she lands a job with the world’s most powerful technology and social media company. Encouraged by the company’s founder (Tom Hanks), Mae joins a groundbreaking experiment that pushes the boundaries of privacy, ethics and personal freedom. Her participation in the experiment, and every decision she makes soon starts to affect the lives and futures of her friends, family and that of humanity.</p>
+</div>
+<hr/>
+
+<div class="movieactors">
+    <h3 class="header3Aart">Lead Cast</h3>
+    <ul class="listactors">
+        <li>Chelsea Huntington</li>
+        <li>John Smith</li>
+        <li>Laura Mills</li>
+        <li>Michael Manion</li>
+    </ul>
+</div>
+<hr/>
+
+<div class="morelikethis">
+    <h2 class="header2aART">More Like This</h2>
+    <div class="row">
+        <div class="col-sm-6 col-xs-6 col-md-4">        
+              <div class="img-thumbnail"><a href="BreakingBadEP1.html">
+            <img src="https://i.imgur.com/by0qJA1.jpg" class="morelikeTHAT img-responsive"></a>
+            <div class="caption">
+              <h3>Breaknig Bad</h3>
+        
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-6 col-md-4">
+            <div class="img-thumbnail"><a href="GreenBook.html">
+                <img src="https://i.imgur.com/XAM5iOa.jpg" class="morelikeTHAT img-responsive"></a>         
+                     <div class="caption">
+                <h3>Green Book</h3>
+             </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-6 col-md-4">
+            <div class="img-thumbnail"><a href="TENET.html">
+                <img src="https://i.imgur.com/W0DI4Ra.jpg" class="morelikeTHAT img-responsive"></a>
+                                <div class="caption">
+                <h3>TENET</h3>
+             </div>
+            </div>
+          </div>
+      </div>
+</div>
+</div>
+    </article>
+    <script src="js/main.js" ></script>
+</body>
+</html>

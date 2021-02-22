@@ -1,0 +1,120 @@
+html {
+  height: auto;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 100%;
+  background-color: rgba(15, 15, 15, 0.911);
+  height: 100%;
+  margin-bottom: 10%;
+  margin-top: -23px;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+}
+.active {
+  background-color: #999;
+}
+.button {
+  border: black 1px solid;
+  background-color: rgb(212, 97, 97);
+  color: #b1b1b1;
+  border-radius: 0;
+}
+
+.navdiv {
+	position: fixed;
+	width: 100%;
+	top: 50px;
+	left: 15px;
+	z-index: 20;
+}
+.menunav{
+  width: 50%;
+  height: 100%;
+  font-size: 28px;
+  z-index:20;
+}
+/* start navbar *//*
+.navbar {
+  font-size: 25px;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  background-color: #242424;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.navbar ul li,
+.navbar .logo {
+  margin-left: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}*/
+/* end navbar */
+.videodashbody {
+  margin-left: 3%;
+  line-height: 1.8;
+  color: #c5baba;
+  font-size: 15px;
+}
+.morelikethis {
+  padding: 10px;
+  margin: 20px;
+}
+.header2aART {
+  font-weight: 600;
+  font-size: 27px;
+  color: #999;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+#player {
+  align-self: center;
+  justify-self: center;
+  position: fixed;
+  max-width: 100%;
+  height: 90%;
+  background-color: rgba(15, 15, 15, 0.5);
+  margin: auto;
+  z-index: 200;
+}
+.close {
+  top: 0%;
+  right: 0%;
+  position: fixed;
+  z-index: 300;
+}
+
+#videoContainer {
+  z-index: 200;
+}
+
+.img-thumbnail {
+  margin-bottom: 32px;
+  background-color: rgba(5, 5, 5, 0.8);
+}
+.video-thumb img {
+  max-width: 100%;
+}
+.caption h4 {
+  /* background-color: rgba(5, 5, 5, 0.8); */
+  padding: 10px;
+}
+/* img {
+    max-width: 100%;
+    height: auto;
+} */

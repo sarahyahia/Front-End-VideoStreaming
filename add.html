@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Video</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+    <!-- start navbar -->
+    <div class="navdiv row">
+        <nav class="navbar navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        
+        <div class="collapse menunav" style="background-color: rgba(226, 140, 144, 0.582);" id="navbarToggleExternalContent">
+            <div class="p-4">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+            </div>
+          <div class="p-4 navElements" style="background-color: rgba(228, 140, 140, 0.541);">
+              <ul  style="list-style: none; left:0;">
+                  <li><a href="/Dashboard.html" style="color: black; text-decoration-style: none;" >TV Shows & Movies</a></li>
+                  <li><a href="/EditProfile.html" style="color: black; text-decoration-style: none;" >Edit Profile</a></li>
+                  <li><a href="/add.html" class="admin" style="color: black; text-decoration-style: none; display: none;" >Add Video</a></li>
+                  <li id="logout"><a href="#" style="color: black; text-decoration-style: none;" >Log out</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    <!-- end navbar -->
+    <div class="bi bi-badge-hd" style="padding:5%;"></div>
+    <div class="container" style="margin: 5%; padding: 3%;">
+        <div class="layout">
+            <form onsubmit="AddVideo();return false";>
+                <div class="form-group video_title">
+                    <label for="title">Video Title</label>
+                    <input id="title" placeholder="Rocket League Pro Championship Gameplay (36 characters remaining)" type="text" class="form-control" id="title" aria-describedby="videoHelp" required>
+                </div>
+    
+                <div class="form-group video_title">
+                    <label for="link">Video Link</label>
+                    <input placeholder="Video Link" id="VideoURL" type="url" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Poster Link</label>
+                    <input placeholder="Poster Link" id="Poster" type="url" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Director</label>
+                    <input placeholder="Director" id="Director" type="text" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Duration </label>
+                    <input placeholder="Duration" type="text" id="Duration" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Actor 1</label>
+                    <input placeholder="Actor 1" type="text" id="Actor1" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Actor 2</label>
+                    <input placeholder="Actor 2" type="text" id="Actor2" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Actor 3</label>
+                    <input placeholder="Actor 3" type="text" id="Actor3" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Actor 4</label>
+                    <input placeholder="Actor 4" type="text" id="Actor4" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+
+                <div class="form-group video_title">
+                    <label for="link">Realease Date</label>
+                    <input placeholder="Realease Date" type="text" id="RealeaseDate" class="form-control" aria-describedby="videolHelp" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">About</label>
+                    <textarea placeholder="Description" id="About" class="form-control" rows="3" required></textarea>
+                </div>
+    
+                <!-- start 4 colms -->
+                <div class="form-row">
+                    <div class="form-group col-sm-3">
+                        <label for="inputState">Orientation</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Straight</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group col-sm-3">
+                        <label for="inputState">Privacy Settings</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Puplic</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group col-sm-3">
+                        <label for="Mon">Monetize</label>
+                        <select id="Mon" class="form-control">
+                            <option selected>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group col-sm-3">
+                        <label for="license">License</label>
+                        <select id="license" class="form-control">
+                            <option selected>Standrad</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- end 4 colms -->
+    
+                <!-- start 3 colms -->
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>Tags (13 Tags Remaining)</label>
+                        <input type="text" class="form-control" placeholder="Gaming PS4">
+                    </div>
+    
+                    <div class="form-group col-md-4">
+                        <label>Cast (Optional)</label>
+                        <input type="text" class="form-control" placeholder="Nathan Drake,">
+                    </div>
+    
+                    <div class="form-group col-md-4">
+                        <label for="language">Language in Video (Optional)</label>
+                        <select id="language" class="form-control">
+                            <option selected>English</option>
+                            <option>Arabic</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- end 3 colms -->
+    
+                <!-- start Category -->
+                <div class="form-row">
+                    <div class="col-sm-8">
+                        <label>Category (you can select upto 6 ctegories)</label>
+                    </div>
+                    <div class="col-sm-4"></div> 
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Abafit
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Leg
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Quiet
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Boy
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Bells
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Water
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="form-row">
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Brick
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Fall
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Rescue
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Fold
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Symptomatic
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Abafit
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="form-row">
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Purpose
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Pin
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Agonizing
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Moan
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Rub
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Well-to-do
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="form-row">
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Shallow
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Trouble
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Stitch
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Overjoyed
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Holiday
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Uniquel
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="form-row">
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Spray
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Gametry
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Scissors
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Obsequious
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Doubtful
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Rhetorical
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="form-row">
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Seashore
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Sort
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Spiffy
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Heat
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Bored
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Limit
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" class="button btn-lg btn-block"  value="Add">Add</button>
+                </div>
+                <!-- end Category -->
+            </form>
+        </div>
+        
+    </div>
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/add.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+</body>
+</html>
