@@ -1,6 +1,10 @@
 # Front-End-VideoStreaming
-!!You must open it with Live Server
-Team 5-B:
+
+You can see the deployment for it here : https://videostreamings.netlify.app/
+
+if you want to clone it to your device and open it You must open it with Live Server
+
+Team Who work on this project:
     1.Ahmed Samir
     2.Abd-Allah El-Mesery
     3.Sarah Yahia
