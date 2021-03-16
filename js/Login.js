@@ -77,14 +77,9 @@ function isLoggedIn () {
 }
 //locationUrl='http://127.0.0.1:5501/'
 function autoRedirect (d) {
-    console.log(location.pathname)
-  if (location.pathname !== '/Login.html') {
-      console.log(location.pathname);
-      //location.href='admin login.html';
-  }else {
-    console.log(location.pathname);
+   
     location.pathname='/Dashboard.html';
-  }
+  
 }
 console.log(Object.getOwnPropertyNames(location));
 console.log(location)
