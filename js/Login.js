@@ -71,9 +71,10 @@ function isLoggedIn () {
     const id = localStorage.getItem('id')
     console.log(token);
     if(token == "undefined"){
-        return false;
-    }
+        return alert("Wrong User Or Password! Please Try Again");
+    }else{
     autoRedirect(token);
+    }
 }
 //locationUrl='http://127.0.0.1:5501/'
 function autoRedirect (d) {
