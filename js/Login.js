@@ -70,7 +70,7 @@ function isLoggedIn () {
     token=localStorage.getItem('token');
     const id = localStorage.getItem('id')
     console.log(token);
-    if(!token){
+    if(token == "undefined"){
         return false;
     }
     autoRedirect(token);
